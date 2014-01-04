@@ -1,3 +1,9 @@
 *.o
+*.lo
 *.d
 tsdecrypt
+.deps
+.libs
+Makefile.in
+libtsdecrypt.la
+
