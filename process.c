@@ -97,7 +97,7 @@ static void dump_ts_pack(struct ts *ts, uint16_t pid, uint8_t *ts_packet) {
 	else					show_ts_pack(ts, pid, "---", NULL, ts_packet);
 }
 
-static void decode_packet(struct ts *ts, uint8_t *ts_packet) {
+void decode_packet(struct ts *ts, uint8_t *ts_packet) {
 	int scramble_idx = ts_packet_get_scrambled(ts_packet);
 	if (scramble_idx > 1) {
 		if (ts->key.is_valid_cw) {
