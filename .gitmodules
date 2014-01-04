@@ -3,4 +3,4 @@
 	url = git://github.com/gfto/libfuncs.git
 [submodule "libtsfuncs"]
 	path = libtsfuncs
-	url = git@github.com:neolynx/libtsfuncs.git
+	url = git://github.com/neolynx/libtsfuncs.git
