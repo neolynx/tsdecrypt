@@ -42,4 +42,4 @@ libtsdecrypt_la_CFLAGS = -DDLIB=\"?\" -DUSE_LIBDVBCSA
 bin_PROGRAMS = tsdecrypt
 tsdecrypt_SOURCES = tsdecrypt.c
 tsdecrypt_CFLAGS = -DVERSION=\"0.1\" -DGIT_VER=\"hmm\" -DBUILD_ID=\"automake\" -DDLIB=\"?\"
-tsdecrypt_LDFLAGS = ./libtsdecrypt.la
+tsdecrypt_LDFLAGS = libtsdecrypt.la -lcrypto
