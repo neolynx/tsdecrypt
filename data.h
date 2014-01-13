@@ -161,6 +161,10 @@ struct camd {
 	struct camd_ops	ops;
 	struct cs378x	cs378x;
 	struct newcamd	newcamd;
+
+        // notifier functions
+        void *ctx;
+	void (*notify_card)(void *ctx, uint16_t caid );
 };
 
 enum io_type {

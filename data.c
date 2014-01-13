@@ -61,6 +61,8 @@ void data_init(struct ts *ts) {
 	ts->camd.user         = "user";
 	ts->camd.pass         = "pass";
 	strcpy(ts->camd.newcamd.hex_des_key, "0102030405060708091011121314");
+        ts->camd.ctx          = NULL;
+        ts->camd.notify_card  = NULL;
 
 	camd_proto_cs378x(&ts->camd.ops);
 

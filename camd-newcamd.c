@@ -278,6 +278,13 @@ static void newcamd_init_card_data(struct camd *c, struct newcamd *nc, uint8_t *
 			break;
 		}
 	}
+
+        // notify the application
+        if (c->ctx) {
+          if (c->notify_card) {
+            c->notify_card(c->ctx, nc->caid);
+          }
+        }
 }
 
 static int newcamd_login(struct camd *c) {
