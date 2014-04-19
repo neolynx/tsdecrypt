@@ -39,6 +39,8 @@ libtsdecrypt_la_SOURCES = csa.c \
 libtsdecrypt_la_LDFLAGS = -lcrypt -lcrypto -ldvbcsa
 libtsdecrypt_la_CFLAGS = -DDLIB=\"?\" -DUSE_LIBDVBCSA
 
+AUTOMAKE_OPTIONS = subdir-objects
+
 bin_PROGRAMS = tsdecrypt
 tsdecrypt_SOURCES = tsdecrypt.c
 tsdecrypt_CFLAGS = -DVERSION=\"0.1\" -DGIT_VER=\"hmm\" -DBUILD_ID=\"automake\" -DDLIB=\"?\"
